@@ -1,8 +1,7 @@
 package com.Hashtable;
 
-/**
- *
- * create a method name as MyMapNode
+/*
+ * create a class name as MyMapNode key and value pair
  */
 public class MyMapNode <K, V> {
     K key;
@@ -10,7 +9,8 @@ public class MyMapNode <K, V> {
     MyMapNode<K, V> next;
 
     /**
-     * create constructor name same as class name and they are passing parameter
+     * create parameterised constructor
+     * they initialinze key ,value and ,next is null
      * @param key
      * @param value
      */
@@ -21,25 +21,24 @@ public class MyMapNode <K, V> {
     }
 
     /**
-     * here we use getter and setter
-     * method setKey is passing passing parameter this is the set the key
-     * getKey is return the key
+     * getter and setter used
+     *
      * @return key
      */
     public K getKey() {
         return key;
     }
-/*
- * setter method
- * it is parameterised method
- */
+
+    /**
+     * setKey is passing the parameter like key
+     * they set the key
+     */
     public void setKey(K key) {
         this.key = key;
     }
 
     /**
-     * here we use getValue and SetValue method
-     * getValue is no parameter passed they just return value
+     * here we create getValue method
      * @return value
      */
     public V getValue() {
@@ -47,28 +46,20 @@ public class MyMapNode <K, V> {
     }
 
     /**
-     * here used seValue method
-     * this is parameterised method coz parameter passed
-     * here set the value
-     *
+     * method create name as setValue
+     * @param value
      */
     public void setValue(V value) {
         this.value = value;
     }
 
-    /*
-     * create a method getNext this is return next value
-     */
     public MyMapNode<K, V> getNext() {
         return next;
     }
-/*
- * here method create setNet set the key and value
- */
+
     public void setNext(MyMapNode<K, V> next) {
         this.next = next;
     }
-
 
     @Override
     public String toString() {
