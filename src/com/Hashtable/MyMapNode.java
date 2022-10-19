@@ -1,18 +1,16 @@
 package com.Hashtable;
 
 /**
- * create class class name as MyMapNode.
  *
+ * create a method name as MyMapNode
  */
-public class MyMapNode <K,V>{
-
+public class MyMapNode <K, V> {
     K key;
     V value;
     MyMapNode<K, V> next;
 
     /**
-     *  cretae constructor name as MyMaoNode and passing key and value
-     *  here
+     * create constructor name same as class name and they are passing parameter
      * @param key
      * @param value
      */
@@ -21,47 +19,62 @@ public class MyMapNode <K,V>{
         this.value = value;
         next = null;
     }
-      /**
-       * here we use getter and setter
-       * 1st get key and set key
-       * getkey is return key setkey is set the key
-       */
+
+    /**
+     * here we use getter and setter
+     * method setKey is passing passing parameter this is the set the key
+     * getKey is return the key
+     * @return key
+     */
     public K getKey() {
         return key;
     }
-
+/*
+ * setter method
+ * it is parameterised method
+ */
     public void setKey(K key) {
         this.key = key;
-
     }
 
     /**
-     * here we used getvalue method and setvalue
-     * set is set the value
-     * and get value is return value
-     * @return return is value
+     * here we use getValue and SetValue method
+     * getValue is no parameter passed they just return value
+     * @return value
      */
     public V getValue() {
         return value;
     }
 
+    /**
+     * here used seValue method
+     * this is parameterised method coz parameter passed
+     * here set the value
+     *
+     */
     public void setValue(V value) {
         this.value = value;
     }
 
+    /*
+     * create a method getNext this is return next value
+     */
     public MyMapNode<K, V> getNext() {
         return next;
     }
-
+/*
+ * here method create setNet set the key and value
+ */
     public void setNext(MyMapNode<K, V> next) {
-        this.next = (MyMapNode<K, V>) next;
+        this.next = next;
     }
+
 
     @Override
     public String toString() {
         StringBuilder nodeString = new StringBuilder();
-        nodeString.append("MyMapNode{" + " Key= ").append(key).append(" Value= ").append(value).append('}');
-        if (next != null)
+        nodeString.append("Node{" + "Key=").append(key).append(" Value=").append(value).append("}");
+        if(next != null)
             nodeString.append("->").append(next);
         return nodeString.toString();
     }
